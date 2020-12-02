@@ -12,10 +12,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <partial name="~/Views/Themes/Standard/Shared/Head.cshtml" />
+    <partial name="~/Views/Themes/Butterfly/Shared/HeadLinks.cshtml" />
 </head>
 <body class="home">
-    <partial name="~/Views/Themes/Standard/Shared/Header.cshtml" model="listModel.Blog.SocialFields" />
+    <header>
+        <partial name="~/Views/Themes/Butterfly/Shared/Header.cshtml" model="listModel.Blog.SocialFields" />
+    </header>
 
     <div class="page-cover" style="background-image: url('@cover')">
         <h1 class="page-cover-title">
@@ -82,6 +84,9 @@
 
         </div>
     </div>
-    <partial name="~/Views/Themes/Standard/Shared/Footer.cshtml" />
+    <footer>
+        <partial name="~/Views/Themes/Butterfly/Shared/Footer.cshtml" />
+        <partial name="~/Views/Themes/Butterfly/Shared/FootLinks.cshtml" />
+    </footer>
 </body>
 </html>
