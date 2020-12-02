@@ -8,10 +8,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <partial name="~/Views/Themes/Standard/Shared/Head.cshtml" />
+    <partial name="~/Views/Themes/Butterfly/Shared/HeadLinks.cshtml" />
 </head>
 <body class="home">
-    <partial name="~/Views/Themes/Standard/Shared/Header.cshtml" model="postModel.Blog.SocialFields" />
+    <header>
+        <partial name="~/Views/Themes/Butterfly/Shared/Header.cshtml" model="postModel.Blog.SocialFields" />
+    </header>
 
     <article class="post-single">
         <div class="post-cover" style="background-image: url('@cover')"></div>
@@ -71,6 +73,9 @@
         </section>
     </article>
 
-    <partial name="~/Views/Themes/Standard/Shared/Footer.cshtml" />
+    <footer>
+        <partial name="~/Views/Themes/Butterfly/Shared/Footer.cshtml" />
+        <partial name="~/Views/Themes/Butterfly/Shared/FootLinks.cshtml" />
+    </footer>
 </body>
 </html>

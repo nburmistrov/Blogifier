@@ -1,7 +1,7 @@
 ﻿<header class="blog-header d-flex flex-column">
     <div class="container d-flex">
         <a href="~/blog" class="blog-logo my-auto d-flex">
-            <img src="~/themes/standard/img/logo-white.png" alt="Blog Title" class="my-auto" />
+            <img src="~/themes/butterfly/img/logo-white.png" alt="Blog Title" class="my-auto" />
         </a>
         <ul class="blog-social nav ml-auto my-auto">
             @foreach (var field in Model)
@@ -21,13 +21,16 @@
         <button class="blog-search-toggle btn-unstyled" type="button" data-toggle="modal" data-target="#blog-search">
             <i class="fa fa-search"></i>
         </button>
-        <ul class="blog-social nav my-auto nav-login">
-            <li class="blog-social-item">
-                <a class="blog-social-link" href="~/admin">
-                    <i class="fa fa-user" aria-hidden="true"></i>
-                </a>
-            </li>
-        </ul>
+        @if (User.Identity.IsAuthenticated)
+        {            
+            <ul class="blog-social nav my-auto nav-login">
+                <li class="blog-social-item">
+                    <a class="blog-social-link" href="~/admin">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                    </a>
+                </li>
+            </ul>
+        }
     </div>
 </header>
 @{
