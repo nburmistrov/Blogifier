@@ -143,7 +143,6 @@
                     Post.Author = await Http.GetJsonAsync<Author>($"authors/{authState.User.Identity.Name}", Request);
 
                     Post.Slug = GetSlug(Post.Title);
-                    Post.Description = Post.Title;
 
                     await Http.PostJsonAsync<PostItem>($"posts", Request, Post);
                     var model = await Http.GetJsonAsync<PostModel>($"posts/byslug/{Post.Slug}?format=md", Request);

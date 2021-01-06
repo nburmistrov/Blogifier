@@ -1,0 +1,37 @@
+﻿@using Askmethat.Aspnet.JsonLocalizer.Localizer
+@inject IJsonStringLocalizer<ListModel> Localizer
+<div class="modal fade blog-search" id="blog-search" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body p-0">
+                <form role="search" asp-controller="Blog" asp-action="Search" method="post">
+                    <input type="search" id="term" name="term" class="form-control form-control-lg" placeholder="@Localizer["search"]" autocomplete="off">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="newsletter">
+    <div class="jumbotron" id="newsletter-form">
+        <h3 class="newsletter-title" id="ttlNewsletter" style="display:none">@Localizer["thank-you"]</h3>
+        <form id="frmNewsletter">
+            <div class="form-group">
+                <h3 class="newsletter-title">@Localizer["newsletter"]</h3>
+                <div class="form-group">
+                    <input class="form-control" id="txtEmail" name="txtEmail" placeholder="@Localizer["enter-email"]" type="text">
+                </div>
+                <small class="form-text text-muted" id="emailHelp">
+                    @Localizer["join-subscribers"]
+                </small>
+            </div>
+            <button id="blog-subscribe" class="btn btn-subscribe btn-rounded btn-dark">@Localizer["subscribe"]</button>
+        </form>
+    </div>
+</div>
+
+<footer class="blog-footer">
+    <div class="container text-center">
+        <p>Copyright © @DateTime.Now.Year. Created by Nikita Burmistrov & Inspired by <a href="https://github.com/blogifierdotnet/Blogifier" data-toggle="tooltip" target="_blank" title="Version - @AppSettings.Version">Blogifier</a>.</p>
+    </div>
+</footer>
