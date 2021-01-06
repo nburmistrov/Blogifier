@@ -239,7 +239,7 @@ namespace Blogifier.Core.Data
                     Title = item.Title,
                     Slug = item.Slug,
                     Content = item.Content,
-                    Description = item.Description ?? item.Title,
+                    Description = item.Description ?? string.Empty,
                     Categories = item.Categories,
                     Cover = item.Cover ?? cover,
                     AuthorId = item.Author.Id,
@@ -259,7 +259,7 @@ namespace Blogifier.Core.Data
                 post.Slug = item.Slug;
                 post.Title = item.Title;
                 post.Content = item.Content;
-                post.Description = item.Description ?? item.Title;
+                post.Description = item.Description ?? string.Empty;
                 post.Categories = item.Categories;
                 post.AuthorId = item.Author.Id;
                 post.Published = item.Published;
